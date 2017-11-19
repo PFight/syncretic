@@ -48,6 +48,15 @@ export class LocalStorageEntityProvider implements IEntityProvider {
         }
         return result as T[];
     }
+    async loadAllOf<T extends DT.IDataEntity = DT.IDataEntity>(
+        entityType: DT.EntityType,
+        paging: Paging): Promise<T[]>
+    {
+        return this.paginate(
+            this.db.entities.filter(x => x.type == entityType),
+            paging
+        ) as T[];
+    }
 
     async refresh(entity: DT.IDataEntity): Promise<IOperationResult> {
         let loaded = await this.load({ id: entity.id, parent: entity.parent,

@@ -1,17 +1,19 @@
-import {ISyncreticModelView, ISyncreticModelElementView, SyncreticModelView } from "./SyncreticModelView"; 
+import { ModelViewType, Size, SyncreticModelElementView, SyncreticModelView } from './SyncreticModelView'; 
 
-export class ImageMapModelView implements ISyncreticModelView {
-    type = SyncreticModelView.ImageMap;
+export class ImageMapModelView implements SyncreticModelView {
+    public previewSize: Size;
+    public prefferedSize: Size;
+    public minSize: Size;
+    public maxSize: Size;
+    public defaultExanded: boolean;
+    public type = ModelViewType.ImageMap;
     
     imageSrc: string;
-    width: string;
-    height: string;
-    viewportWidth: string;
-    viewportHeight: string;
+    viewportSize: Size;
 }
 
-export class ImageMapModelElementView implements ISyncreticModelElementView {
-    type = SyncreticModelView.ImageMap;
+export class ImageMapModelElementView implements SyncreticModelElementView {
+    type = ModelViewType.ImageMap;
 
     shape: string;
     coords: string;

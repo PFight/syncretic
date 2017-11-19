@@ -1,6 +1,6 @@
 import {IAccessRights } from "../access/IAccessRights";
 import {SyncreticModel, SyncreticModelTimestamp} from "./SyncreticModel";
-import {ISyncreticModelElementView } from "./SyncreticModelView";
+import {SyncreticModelElementView } from "./SyncreticModelView";
 import {ITimestampObject} from "../ITimestampObject";
 import {IDataEntity, EntityType } from "../IDataEntity";
 
@@ -14,7 +14,7 @@ export class ModelElement implements IDataEntity {
     public access: IAccessRights;
     public children: ModelElement[];
     public parentModel: SyncreticModel;
-    public view: ISyncreticModelElementView;
+    public view: SyncreticModelElementView;
 
     public timestamp: ModelElementTimestamp;
     public userSpecific: ModelElementUserSpecific;

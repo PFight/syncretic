@@ -38,14 +38,6 @@ describe('services/entity-provider', () => {
 
     expect(JSON.stringify(result)).equal(JSON.stringify(model));
   });
-  it('should return same object on add ', async () => {
-    let provider = create();
-    let tree = new DT.ModelCategoryTree();
-    let result = await provider.add(tree);
-
-
-    expect(tree).equal(result.data);
-  });
   it('should update id on add ', async () => {
     let provider = create();
     let tree = new DT.ModelCategoryTree();

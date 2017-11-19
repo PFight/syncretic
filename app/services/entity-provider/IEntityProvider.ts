@@ -11,6 +11,9 @@ export interface IEntityProvider {
     loadRelated<T extends DT.IDataEntity = DT.IDataEntity>(ref: IEntityRef, 
         relatedType: DT.EntityType, 
         paging: Paging): Promise<T[]>;
+    loadAllOf<T extends DT.IDataEntity = DT.IDataEntity>(
+        entityType: DT.EntityType,
+        paging: Paging): Promise<T[]>;
     refresh(entity: DT.IDataEntity): Promise<IOperationResult>;
     refreshAll(entities: DT.IDataEntity[]): Promise<IOperationResult>;
 
@@ -26,3 +29,5 @@ export interface IEntityProvider {
     loadTimestamp(target: IEntityRef): Promise<DT.ITimestampObject>;
     loadTimestampAll(targets: IEntityRef[]): Promise<DT.ITimestampObject[]>;
 }
+
+export type $EntityProvider = { entityProvider: IEntityProvider };

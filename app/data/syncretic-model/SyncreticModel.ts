@@ -1,6 +1,6 @@
 import { IAccessRights } from "../access/IAccessRights";
 import { ModelElement, ModelElementTimestamp, ModelElementUserSpecific } from "./ModelElement";
-import { ISyncreticModelView } from "./SyncreticModelView";
+import { SyncreticModelView } from "./SyncreticModelView";
 import {ITimestampObject} from "../ITimestampObject";
 import {IDataEntity, EntityType, IUserSpecific} from "../IDataEntity";
 
@@ -15,7 +15,7 @@ export class SyncreticModel implements IDataEntity {
     /** ID list of categories from different trees, containing this model. */
     public categories: [string];
     public elements: ModelElement[];
-    public view: ISyncreticModelView;
+    public view: SyncreticModelView;
 
     public timestamp: SyncreticModelTimestamp;
     public userSpecific: SyncreticModelUserSpecific;
