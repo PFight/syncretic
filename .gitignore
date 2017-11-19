@@ -1,0 +1,10 @@
+.vs
+bin
+obj
+*.csproj.user
+App/**/*.js
+App/**/*.js.map
+External/Alina
+.vscode
+jspm_packages
+node_modules

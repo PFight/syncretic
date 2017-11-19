@@ -1,0 +1,36 @@
+{
+  "name": "syncretic",
+  "version": "0.0.1",
+  "scripts": {
+    "compile-mocha": "tsc -p tsconfig.mocha.json",
+    "mocha": "cross-env TS_NODE_PROJECT=tsconfig.mocha.json mocha -r ts-node/register App/**/*.test.ts",
+    "test": "npm run mocha || ECHO.",
+    "compile": "tsc -p tsconfig.json"
+  },
+  "jspm": {
+    "configFile": "systemjs-config.js",
+    "dependencies": {
+      "derivable": "npm:derivable@^0.12.1",
+      "typestyle": "npm:typestyle@^1.5.1"
+    },
+    "devDependencies": {}
+  },
+  "dependencies": {
+    "derivable": "^0.12.1",
+    "typestyle": "^1.5.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.44",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "cross-env": "^5.1.1",
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-util": "^3.0.8",
+    "mocha": "^4.0.1",
+    "systemjs": "^0.20.19",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.7.0-dev.20171104"
+  }
+}
