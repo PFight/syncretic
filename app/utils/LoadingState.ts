@@ -9,7 +9,7 @@ export class LoadingState {
     try {
       return await job();
     } catch(err) {
-      this.error.set(err);
+      this.error.set(err && err.message || err || "Unknown error");
     } finally {
       this.loading.set(false);
     }

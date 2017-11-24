@@ -4,7 +4,7 @@ export class HistoryEntry implements IDataEntity {
     public id: string;
     /** Target entity id */
     public parent: string;
-    public get type() { return EntityType.EntityComment }
+    public readonly type = EntityType.EntityComment;
 
     userID: string;
     dateTime: Date;

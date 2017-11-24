@@ -8,7 +8,7 @@ interface Test {
 }
 type TestA = Models.Atomized<Test>;
 
-describe('Models/Atomize', () => {
+describe('utils/Atomize', () => {
   it('should atomize objects', async () => {
     let obj = { num: 42, arr: ["hello", "there"] } as Test;
     let aobj = Models.atomize(obj);

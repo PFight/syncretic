@@ -12,7 +12,7 @@ export class SyncreticObject implements IDataEntity {
     /** ObjectSource id */
     public parent: string;
     public name: string;
-    public get type() { return EntityType.SyncreticObject }
+    public readonly type = EntityType.SyncreticObject;
     public objectType: string;
     public customDigestAttributes: CustomAttribute[];
     public details: SyncreticObjectDetails;

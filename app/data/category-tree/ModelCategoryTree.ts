@@ -6,7 +6,7 @@ import {IDataEntity, EntityType, IUserSpecific} from "../IDataEntity";
 export class ModelCategoryTree implements IDataEntity {
     
     public id: string;
-    public get type() { return EntityType.ModelCategoryTree }
+    public readonly type = EntityType.ModelCategoryTree;
     public access: IAccessRights;
     public nodes: ModelCategory[];
 

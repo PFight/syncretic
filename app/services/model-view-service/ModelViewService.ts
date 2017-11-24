@@ -32,8 +32,7 @@ export class ModelViewService {
   protected loadPage(paging: Paging): Promise<ModelViewState[]> {
     return this.state.load(async () => {
       let models = await this.services.entityProvider.loadAllOf<DT.SyncreticModel>(
-        DT.EntityType.SyncreticModel, 
-        { skip: 0, maxCount: this.pageSize });
+        DT.EntityType.SyncreticModel, paging);
 
       return models.map(x => new ModelViewState(x));
     }); 

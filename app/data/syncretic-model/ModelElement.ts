@@ -5,7 +5,7 @@ import {ITimestampObject} from "../ITimestampObject";
 import {IDataEntity, EntityType } from "../IDataEntity";
 
 export class ModelElement implements IDataEntity {
-    get type(): EntityType { return EntityType.ModelElement; }
+    readonly type = EntityType.ModelElement;
     public name: string;
     public description: string;
     public id: string;

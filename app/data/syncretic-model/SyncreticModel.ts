@@ -10,7 +10,7 @@ export class SyncreticModel implements IDataEntity {
     public id: string;
     /** ModelCategory ID */
     public parent: string;
-    public get type() { return EntityType.SyncreticModel }
+    public readonly type = EntityType.SyncreticModel;
     public access: IAccessRights;
     /** ID list of categories from different trees, containing this model. */
     public categories: [string];

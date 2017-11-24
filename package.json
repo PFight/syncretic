@@ -4,7 +4,7 @@
   "scripts": {
     "compile-mocha": "tsc -p tsconfig.mocha.json",
     "mocha": "cross-env TS_NODE_PROJECT=tsconfig.mocha.json mocha -r ts-node/register App/**/*.test.ts",
-    "test": "npm run mocha || ECHO.",
+    "test": "npm run compile-mocha && npm run mocha",
     "compile": "tsc -p tsconfig.json"
   },
   "jspm": {

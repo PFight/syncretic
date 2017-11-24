@@ -3,7 +3,7 @@ import { IAccessRights } from "../index";
 
 export abstract class ObjectsSource implements IDataEntity {
     public id: string;
-    public get type(): EntityType { return EntityType.ObjectSource }
+    public readonly type = EntityType.ObjectSource;
     public access?: IAccessRights;
     public name: string;
     public sourceType: ObjectSourceType;

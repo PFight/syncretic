@@ -4,7 +4,7 @@ export class EntityComment implements IDataEntity {
     public id: string;
     /** Taraget entity id */
     public parent: string;
-    public get type() { return EntityType.EntityComment }
+    public readonly type = EntityType.EntityComment;
 
     public replyToCommentID: string;
     public userID: string;

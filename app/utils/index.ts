@@ -1,3 +1,3 @@
 export * from "./Atomize";
 export * from "./Common";
-export * from "./Loader";
+export * from "./LoadingState";

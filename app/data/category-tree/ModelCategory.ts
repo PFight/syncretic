@@ -4,7 +4,7 @@ import {ITimestampObject} from "../ITimestampObject";
 import { IDataEntity, EntityType } from "../IDataEntity";
 
 export class ModelCategory implements IDataEntity {
-    public get type() { return EntityType.ModelCategoryTree };
+    public readonly type = EntityType.ModelCategoryTree;
     public name: string;
     public description: string;
     public id: string;
