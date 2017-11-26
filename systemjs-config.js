@@ -17,7 +17,11 @@ System.config({
   },
 
   map: {
+    "alina-core": "npm:alina-core@0.0.1",
+    "alina-std": "npm:alina-std@0.0.1",
+    "derivable-alina": "npm:derivable-alina@0.0.1",
     "derivable": "npm:derivable@0.12.1",
+    "isotope-layout": "npm:isotope-layout@3.0.4",
     "typestyle": "npm:typestyle@1.5.1",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
@@ -201,6 +205,9 @@ System.config({
       "md5.js": "npm:md5.js@1.3.4",
       "safe-buffer": "npm:safe-buffer@5.1.1"
     },
+    "npm:fizzy-ui-utils@2.0.5": {
+      "desandro-matches-selector": "npm:desandro-matches-selector@2.0.2"
+    },
     "npm:free-style@2.5.1": {
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -232,6 +239,17 @@ System.config({
     "npm:inherits@2.0.3": {
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
+    "npm:isotope-layout@3.0.4": {
+      "desandro-matches-selector": "npm:desandro-matches-selector@2.0.2",
+      "fizzy-ui-utils": "npm:fizzy-ui-utils@2.0.5",
+      "get-size": "npm:get-size@2.0.2",
+      "masonry-layout": "npm:masonry-layout@4.2.0",
+      "outlayer": "npm:outlayer@2.1.1"
+    },
+    "npm:masonry-layout@4.2.0": {
+      "get-size": "npm:get-size@2.0.2",
+      "outlayer": "npm:outlayer@2.1.1"
+    },
     "npm:md5.js@1.3.4": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.1",
       "hash-base": "npm:hash-base@3.0.4",
@@ -240,6 +258,11 @@ System.config({
     "npm:miller-rabin@4.0.1": {
       "bn.js": "npm:bn.js@4.11.8",
       "brorand": "npm:brorand@1.1.0"
+    },
+    "npm:outlayer@2.1.1": {
+      "ev-emitter": "npm:ev-emitter@1.1.1",
+      "fizzy-ui-utils": "npm:fizzy-ui-utils@2.0.5",
+      "get-size": "npm:get-size@2.0.2"
     },
     "npm:parse-asn1@5.1.0": {
       "asn1.js": "npm:asn1.js@4.9.2",

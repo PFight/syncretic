@@ -1,3 +1,3 @@
-﻿import * as Alina from "../External/Alina/alina";
+﻿import * as Alina from "alina";
 
 export { Alina };

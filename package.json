@@ -11,13 +11,18 @@
     "configFile": "systemjs-config.js",
     "dependencies": {
       "derivable": "npm:derivable@^0.12.1",
+      "isotope-layout": "npm:isotope-layout@^3.0.4",
       "typestyle": "npm:typestyle@^1.5.1"
     },
     "devDependencies": {}
   },
   "dependencies": {
+    "@types/isotope-layout": "^3.0.2",
     "derivable": "^0.12.1",
-    "typestyle": "^1.5.1"
+    "isotope-layout": "^3.0.4",
+    "typestyle": "^1.5.1",
+    "alina": "^0.0.1",
+    "derivable-alina": "^0.0.1"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.44",

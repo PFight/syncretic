@@ -43,3 +43,5 @@ export class ModelViewService {
       this.services.modelViewPageSize : 15;
   }
 }
+
+export type $ModelViewService = { modelViewService: ModelViewService };

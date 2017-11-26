@@ -11,10 +11,9 @@
 		"sourceMap": true
 	},
   "include": [
-    "external/**/*.ts",
     "app/**/*.ts"
   ],
 	"exclude": [
 	],
-	"compileOnSave": true,
+	"compileOnSave": true
 }

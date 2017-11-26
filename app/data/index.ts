@@ -8,6 +8,7 @@ export * from "./syncretic-model/SyncreticModel";
 export * from "./syncretic-model/ModelElement";
 export * from "./syncretic-model/SyncreticModelView";
 export * from "./syncretic-model/ImageMapModelView";
+export * from "./syncretic-model/HtmlModelView";
 export * from "./sources/FileSystemSource";
 export * from "./sources/ObjectsSource";
 export * from "./history/HistoryEntry";
