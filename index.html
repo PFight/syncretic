@@ -24,14 +24,27 @@
 </head>
 
 <body>
+
     <div id="app">
-      Loading...
+        Loading...
     </div>
+
+<!-- inject:html -->
+<template id="masonry-model-list">
+  <div class="model-list">
+    <template id="model-item">
+      <iframe class="model-list__item" width=@modelWidth height=@modelHeight>
+      </iframe>
+    </template>
+  </div>
+</template>
+<!-- endinject -->
+
     <!--<script type="text/javascript" src="cordova.js"></script>-->
     <script type="text/javascript" src="jspm_packages/system.js"></script>
     <script type="text/javascript" src="systemjs-config.js"></script>
     <script type="text/javascript">
-      System.import("App/App");
+        System.import("App/App");
     </script>
 </body>
 

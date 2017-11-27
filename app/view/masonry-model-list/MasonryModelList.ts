@@ -4,21 +4,13 @@ import { Derivable } from "derivable";
 import { DT, SRV } from "../Imports";
 import { RenderModelView } from "./RenderModelView";
 
-const template = makeTemplate(`
-  <div class="model-list">
-    <template id="model-item">
-      <iframe class="model-list__item" width=@modelWidth height=@modelHeight>
-      </iframe>
-    </template>
-  </div>
-`);
-
 export class MasonryModelList extends AlinaComponent {
   constructor(root, private services: SRV.$ModelViewService) {
     super(root);
   }
 
   onInit() {
+    const template = document.querySelector<HTMLTemplateElement>("#masonry-model-list");
     this.root.tpl().setChild(template, (root) => {
       this.render(root);
     });
