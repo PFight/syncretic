@@ -8,7 +8,11 @@
     "noEmitHelpers": false,
     "importHelpers":  false,
 		"lib": [ "es6", "dom" ],
-		"sourceMap": true
+		"sourceMap": true,
+		"paths": {
+			"app/*": ["./app/*/index"]
+		},
+		"baseUrl": "./"
 	},
   "include": [
     "app/**/*.ts"

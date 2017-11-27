@@ -4,20 +4,19 @@ System.config({
   transpiler: false,
   paths: {
     "github:*": "jspm_packages/github/*",
-    "npm:*": "jspm_packages/npm/*"
+    "npm:*": "jspm_packages/npm/*",
+    "app/*": "app/*/index"
   },
 
   packages: {
     "App": {
-      "defaultExtension": "js"
-    },
-    "External": {
       "defaultExtension": "js"
     }
   },
 
   map: {
     "alina-core": "npm:alina-core@0.0.1",
+    "alina": "npm:alina@0.0.1",
     "alina-std": "npm:alina-std@0.0.1",
     "derivable-alina": "npm:derivable-alina@0.0.1",
     "derivable": "npm:derivable@0.12.1",

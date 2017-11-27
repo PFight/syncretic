@@ -1,12 +1,12 @@
 import { AlinaComponent, Alina } from "derivable-alina";
-import { makeTemplate } from "alina";
+import { makeTemplate } from "alina-core";
 import { Derivable } from "derivable";
 import { DT, SRV } from "../Imports";
 import { RenderModelView } from "./RenderModelView";
 
 const template = makeTemplate(`
-  <div class="model-list>
-    <template>
+  <div class="model-list">
+    <template id="model-item">
       <iframe class="model-list__item" width=@modelWidth height=@modelHeight>
       </iframe>
     </template>
@@ -18,10 +18,14 @@ export class MasonryModelList extends AlinaComponent {
     super(root);
   }
 
-  onInit() { this.render(this.root);  }
+  onInit() {
+    this.root.tpl().setChild(template, (root) => {
+      this.render(root);
+    });
+  }
   
   render(root: Alina) {
-    root.repeat("iframe", this.services.modelViewService.models, (item, model) => {
+    root.repeat("#model-item", this.services.modelViewService.models, (item, model) => {
       item.on(model.size, () => {
         item.set("@modelWidth", model.size.get().width);
         item.set("@modelHeight", model.size.get().height);
